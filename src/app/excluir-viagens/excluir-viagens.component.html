@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="alert alert-danger {{alertDisplay}}" role="alert">
+    Tem certeza que deseja excluir a viagem abaixo?
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-secondary">Excluir viagem</li>
+    <li class="list-group-item">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data de chegada</th>
+            <th scope="col">Data de saída</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>aa</td>
+            <td style="width: 1%;">
+              <button type="button" class="btn btn-secondary" routerLink="/">Voltar</button>
+            </td>
+            <td style="width: 1%;">
+              <button type="button" class="btn btn-danger" (click)="handleClick()">{{excluirText}}</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</div>

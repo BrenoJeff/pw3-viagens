@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-secondary">Minhas viagens</li>
+    <li class="list-group-item">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data de chegada</th>
+            <th scope="col">Data de saída</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let viagem of listaViagens">
+            <td>{{viagem.destino}}</td>
+            <td>{{viagem.tipo}}</td>
+            <td>{{viagem.dataChegada | date:'dd/MM/yyyy'}}</td>
+            <td>{{viagem.dataSaida | date:'dd/MM/yyyy'}}</td>
+            <td style="width: 1%;">
+              <button type="button" class="btn btn-secondary" routerLink="/detalhe">Detalhes</button>
+            </td>
+            <td style="width: 1%;">
+              <button type="button" class="btn btn-danger" routerLink="/excluir">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</div>
